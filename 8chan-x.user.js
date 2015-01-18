@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Tux3's 8chan X
-// @version     1.38
+// @version     1.39
 // @namespace   8chan-X
 // @description Small userscript to improve 8chan
 // @match       *://8chan.co/*
@@ -220,7 +220,7 @@ function initMenu() {
   $('html > head').append($('<style>.sub[data-description="3"] { display:none; }</style>')); //< The "3" is added dynamically after we run
   
   // Hide bottom menu, we already have a fixed one
-  document.getElementsByClassName("boardlist bottom")[0].style.display='none';
+  $(".boardlist.bottom").hide();
   
   if (isOnCatalog())
     add_favorites();
