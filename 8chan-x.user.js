@@ -1,9 +1,14 @@
 // ==UserScript==
 // @name        Tux3's 8chan X
-// @version     1.35
+// @version     1.36
 // @namespace   8chan-X
 // @description Small userscript to improve 8chan
 // @match       *://8chan.co/*
+// @match       *://hatechan.co/*
+// @match       *://jp.8chan.co/*
+// @match       *://8ch.net/*
+// @match       *://h.8chan.co/*
+// @match       *://h.8ch.net/*
 // @run-at      document-end
 // @grant       none
 // @require     http://timeago.yarp.com/jquery.timeago.js
