@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Tux3's 8chan X
-// @version     1.37
+// @version     1.38
 // @namespace   8chan-X
 // @description Small userscript to improve 8chan
 // @match       *://8chan.co/*
@@ -200,10 +200,6 @@ function updateMenuStats() {
   stats.innerHTML = " ["+nPosts+" / "+nImages+"]";
 }
 
-function aaaTest() {
-  alert("Test2");
-}
-
 function initMenu() {
   // Customize the menu
   var menu = document.getElementsByClassName("boardlist")[0];
@@ -217,9 +213,14 @@ function initMenu() {
   menu.style.zIndex='50';
   $("html").css("margin-top","15px");
   updateMenuStyle();
+  
+  // Hide forced official menu boards
   document.querySelector('[data-description="1"]').style.display = 'none';
   document.querySelector('[data-description="2"]').style.display = 'none';
   $('html > head').append($('<style>.sub[data-description="3"] { display:none; }</style>')); //< The "3" is added dynamically after we run
+  
+  // Hide bottom menu, we already have a fixed one
+  document.getElementsByClassName("boardlist bottom")[0].style.display='none';
   
   if (isOnCatalog())
     add_favorites();
