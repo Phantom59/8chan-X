@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =======
 8chan-X
 =======
@@ -32,4 +31,3 @@ QR Formatting :
  - CTRL+I : Italics
  - CTRL+B : Bold
  - CTRL+R : Redtext
->>>>>>> origin/master
